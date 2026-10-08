@@ -35,8 +35,8 @@
     <button data-m="bar">Bar across the eyes</button>
     <label>Strength <output id="sv">24</output></label>
     <input id="strength" type="range" min="4" max="80" value="24">
-    <label>Oval size <output id="rv">18</output>%</label>
-    <input id="radius" type="range" min="8" max="40" value="18">
+    <label>Oval size <output id="rv">14</output>%</label>
+    <input id="radius" type="range" min="8" max="40" value="14">
     <p class="note">Hold the photograph to see it without the effect. Release to put the effect back.</p>
   </div>
 </div>
@@ -45,8 +45,8 @@ const SRC="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD//gAMQXBwbGVNYXJrCv
 const img=new Image();
 const c=document.getElementById("c");
 const ctx=c.getContext("2d");
-let method="gaussian", strength=24, radiusPct=18;
-let cx=0.28, cy=0.46, down=false, hold=false;
+let method="gaussian", strength=24, radiusPct=14;
+let cx=0.78, cy=0.22, down=false, hold=false;
 const buttons=[...document.querySelectorAll("button")];
 buttons.forEach(b=>b.onclick=()=>{method=b.dataset.m; buttons.forEach(x=>x.classList.toggle("on",x===b)); draw()});
 document.getElementById("strength").oninput=e=>{strength=+e.target.value; document.getElementById("sv").textContent=strength; draw()};
